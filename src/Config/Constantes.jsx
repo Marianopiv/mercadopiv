@@ -43,7 +43,7 @@ export const productos = [
         id:'producto-6',
         nombre: "Moto Motomel",
         precio: 300000,
-        img: "https://coppelar.vtexassets.com/arquivos/ids/1565409-340-340?v=637631637228870000&width=340&height=340&aspect=true",
+        img: "https://ss207.liverpool.com.mx/xl/1091242636.jpg",
         stock: 2,
         categoria:'Vehiculos'
     },
