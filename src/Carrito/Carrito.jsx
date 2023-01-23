@@ -11,28 +11,44 @@ export default function Carrito() {
 
   return (
     <>
-      <div className="bg-indigo-400 w-full h-screen flex flex-col items-center gap-10">
+      <div className="bg-indigo-400 w-full h-screen flex flex-col items-center gap-10 pt-2">
         <button
           onClick={() => navigate("/")}
-          className="bg-white font-bold px-2 border-zinc-500 absolute left-3/4  rounded-full"
+          className="font-bold px-2 border-zinc-500 absolute right-8  rounded-md bg-red-500 text-white"
         >
           X
         </button>
-        <h1 className="text-3xl  font-bold">Mi Carrito</h1>
+        <h1 className="text-3xl  font-bold tracking-widest">Mi Carrito</h1>
         <div className="relative ml-96"></div>
-        <div className="flex flex-wrap justify-center items-center space-x-5 bg-indigo-100 p-10 rounded-lg">
+        <div
+          className={`flex flex-wrap justify-center gap-2 sm:gap-10 items-center  sm:bg-indigo-100 bg-indigo-100 p-8 rounded-lg z-50 ${
+            agregados.length > 0 ? "h-auto" : "h-auto"
+          }  text-center`}
+        >
           {agregados.length > 0
             ? agregados.map((item) => (
                 <CarritoItem item={item} deleteItem={deleteItem} />
               ))
             : "El Carrito esta vacío"}
-        </div>
         {agregados.length > 0 && (
-          <div className="bg-indigo-300 p-10 rounded-lg  font-bold">
-            Total a abonar:$
-            {total(agregados)}
-          </div>
-        )}
+            <div className="bg-indigo-300 p-8 my-14 h-auto  rounded-lg font-bold w-3/4 flex text-center justify-center sm:hidden">
+              <p>
+                Total a abonar:$
+                {total(agregados)}
+              </p>
+            </div>
+          )}
+        <div className="w-screen z-50 flex justify-center">
+          {agregados.length > 0 && (
+            <div className="bg-indigo-300 p-10 sm:p-10 rounded-lg font-bold sm:flex hidden mb-4 ">
+              <p>
+                Total a abonar:$
+                {total(agregados)}
+              </p>
+            </div>
+          )}
+        </div>
+        </div>
       </div>
     </>
   );

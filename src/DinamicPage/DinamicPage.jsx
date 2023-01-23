@@ -43,7 +43,7 @@ const DinamicPage = () => {
             <div className="float-right mr-5">
               <button
                 onClick={() => navigate("/")}
-                className="bg-red-500 rounded-full hover:bg-pink-600 text-white  px-3 py-2"
+                className="bg-red-500 rounded-md hover:bg-pink-600 text-white  px-3 py-1"
               >
                 X
               </button>

@@ -40,11 +40,9 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
-  const {isMobile} = useContext(LayoutContext)
   const navigate = useNavigate();
   const [cambioCategoria, setCambioCategoria] = useState(null);
 
-  console.log(isMobile)
   const handleChange = (e) => {
     setCambioCategoria(e);
   };

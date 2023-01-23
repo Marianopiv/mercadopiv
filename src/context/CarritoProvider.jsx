@@ -8,7 +8,6 @@ const CarritoProvider = ({ children }) => {
 
   const agregar = (agregado) => {
     setAgregados([...agregados, agregado]);
-    console.log(agregados);
   };
 
   const deleteItem = (item) => {
