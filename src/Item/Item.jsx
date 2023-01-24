@@ -6,7 +6,7 @@ export default function Item({
 }) {
   return (
     <>
-      <div className="flex flex-col justify-center items-center space-y-5 border-solid border-2 rounded-md border-indigo-600 p-3 hover:bg-indigo-600 hover:opacity-50 hover:text-white hover:cursor-pointer bg-indigo-100">
+      <div className="flex flex-col justify-center items-center space-y-5 border-solid border-2 rounded-md border-indigo-600 p-3 hover:bg-indigo-600 hover:opacity-50 hover:text-white hover:cursor-pointer bg-indigo-100 w-64 text-center">
         <div className="text-2xl font-bold">{nombre}</div>
         <div className="text-2xl font-bold">${precio}</div>
         <div className="rounded-sm flex flex-col space-y-3">

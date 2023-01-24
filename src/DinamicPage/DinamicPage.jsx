@@ -38,21 +38,21 @@ const DinamicPage = () => {
           </button>
         </div>
       ) : (
-        <div>
+        <div className="flex flex-col items-center">
           <div className="w-screen h-5/6 bg-white">
-            <div className="float-right mr-5">
+            <div className="flex justify-end">
               <button
                 onClick={() => navigate("/")}
-                className="bg-red-500 rounded-md hover:bg-pink-600 text-white  px-3 py-1"
+                className="bg-red-500 rounded-md hover:bg-pink-600 text-white  px-3 mr-3 py-1"
               >
                 X
               </button>
             </div>
-            <div className="columns-2 flex flex-wrap h-auto w-screen justify-center gap-x-80 gap-y-16 ">
+            <div className="columns-2 flex flex-wrap h-auto w-auto sm:w-screen justify-center gap-x-80 gap-y-16 ">
               <div className="flex justify-center items-start">
-                <img className="max-w-md max-h-96" src={producto.img} alt="" />
+                <img className="max-w-xs max-h-96 object-contain sm:max-w-md sm:max-h-96" src={producto.img} alt="" />
               </div>
-              <div className="flex flex-col items-center space-y-5 border-gray-400 border rounded-md p-3">
+              <div className="flex flex-col items-center space-y-5 border-gray-400 border rounded-md p-3 text-center">
                 <h1 className="text-4xl font-bold">{producto.nombre}</h1>
                 <h2 className="text-3xl">${producto.precio}</h2>
                 <h2>Stock disponible: {producto.stock}</h2>
