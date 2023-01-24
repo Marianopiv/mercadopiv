@@ -63,7 +63,6 @@ export const productos = [
         stock: 2,
         categoria:'Vehiculos'
     },
-
 ]
 
 
